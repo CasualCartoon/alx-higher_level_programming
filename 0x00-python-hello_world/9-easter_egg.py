@@ -1,2 +1,2 @@
-from this import zen
-print(zen.replace('\n', '\n\t'))
+#!/usr/bin/python3
+import this
