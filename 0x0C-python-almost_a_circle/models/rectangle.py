@@ -72,10 +72,14 @@ class Rectangle(Base):
 
     def __validate_positive_int(self, attribute, value):
         """Private method to validate positive integers."""
-        if not isinstance(value, int) or value <= 0:
-            raise ValueError(f"{attribute} must be a positive integer")
+        if not isinstance(value, int):
+            raise TypeError(f"{attribute} must be an integer")
+        elif value <= 0:
+            raise ValueError(f"{attribute} must be > 0")
 
     def __validate_non_negative_int(self, attribute, value):
         """Private method to validate non-negative integers."""
-        if not isinstance(value, int) or value < 0:
-            raise ValueError(f"{attribute} must be a non-negative integer")
+        if not isinstance(value, int):
+            raise TypeError(f"{attribute} must be an integer")
+        elif value < 0:
+            raise ValueError(f"{attribute} must be >= 0")
