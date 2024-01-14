@@ -70,6 +70,10 @@ class Rectangle(Base):
         self.__validate_non_negative_int("y", value)
         self.__y = value
 
+    def area(self):
+        """Calculate and return the area of the rectangle."""
+        return self.__width * self.__height
+
     def __validate_positive_int(self, attribute, value):
         """Private method to validate positive integers."""
         if not isinstance(value, int):
