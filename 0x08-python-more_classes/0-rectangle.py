@@ -2,3 +2,7 @@
 
 class Rectangle:
     pass
+
+myrectangle = Rectangle()
+
+print(type(myrectangle))
