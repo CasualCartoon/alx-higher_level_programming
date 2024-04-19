@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script sends a POST request to a URL with specified variables and displays the response body
+# This script sends a POST request to a URL with specified email and subject variables using curl
 
 # Check if the correct number of arguments are provided
 if [ "$#" -ne 1 ]; then
@@ -7,12 +7,5 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
-# Extract URL from command line arguments
-url="$1"
-
-# Define variables for email and subject
-email="test@gmail.com"
-subject="I will always be here for PLD"
-
-# Send a POST request with specified variables and display the response body
-curl -s -X POST -d "email=$email&subject=$subject" "$url"
+# Send a POST request with email and subject variables and display the response body
+curl -s "$1" -X POST -d "email=hr@holbertonschool.com&subject=I will always be here for PLD"
